@@ -8,6 +8,10 @@
 
 ### 2.1 Mapping规范
 
+NO Dynamic
+
+
+
 ### 2.2 ID
 
 ### 2.3 时区
