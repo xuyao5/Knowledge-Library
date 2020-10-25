@@ -10,17 +10,37 @@
 
 ###### 原则上，禁止ES进行动态映射，因为动态映射会不准确
 
+###### 有意思的类型
+
+| **Datatype** | **Point** |
+| ------------ | --------- |
+| Text 和 Keyword | 是否分词 |
+| Nested | join查询 |
+| Range | 加快搜索 |
+| Date | 日期格式 |
+
+###### 更好的es mapping管理：Dynamic templates
+
 ### 2.2 ID
 
-必须要有ID
+###### 在数据库应用中，有逻辑主键和业务主键的区别，但是在es中，强烈要求每个document的id为业务主键
+###### es中的一些底层操作依赖id的version对比，如果使用无意义的id(如：seq)，则会损失很多高性能API
 
 ### 2.3 时区
 
+###### 在es内部，date被转为UTC，并被存储为一个长整型数字，代表从1970年1月1号0点到现在的毫秒数。Elasticsearch默认为UTC时间，即零时区，查询时若不指定时区，则默认以0时区查询，和我们所在的东八区差8小时
+
 ### 2.4 Java Client
 
-### 2.5 Profile Analysis
+###### 只推荐Java High Level REST Client
+
+### 2.5 Search Explain
+
+###### "explain" : true
 
 ### 2.6 同步
+
+###### 不推荐asynchronous用法，推荐使用同步+java CompletableFuture
 
 ### 2.7 带Proxy的ES架构
 
