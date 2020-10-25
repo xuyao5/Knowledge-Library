@@ -12,6 +12,8 @@ NO Dynamic
 
 ### 2.2 ID
 
+必须要有ID
+
 ### 2.3 时区
 
 ### 2.4 Java Client
