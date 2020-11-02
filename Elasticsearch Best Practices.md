@@ -33,24 +33,23 @@
 ### 2.4 Java Client
 
 ###### 只推荐Java High Level REST Client
+###### 不推荐asynchronous用法，推荐使用同步+java CompletableFuture
 
 ### 2.5 Search Explain
 
 ###### "explain" : true
 
-### 2.6 同步
+### 2.6 带Proxy的ES架构
 
-###### 不推荐asynchronous用法，推荐使用同步+java CompletableFuture
+###### 应用直连ES vs Proxy代理访问对比
 
-### 2.7 带Proxy的ES架构
+### 2.7 ES SQL/Template选择
 
-### 2.8 ES SQL/Template选择
+### 2.8 聚合
 
-### 2.9 聚合
+### 2.9 写入开放查询关闭
 
-### 2.10 写入开放查询关闭
-
-### 2.11 锁
+### 2.10 锁
 
 ###### 原则上
 
@@ -83,6 +82,8 @@
 ## 8 性能调优
 
 ## 9 常见坑
+
+1000条限制
 
 #### 地址表
 
